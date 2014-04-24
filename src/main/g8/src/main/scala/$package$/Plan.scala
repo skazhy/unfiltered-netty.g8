@@ -24,7 +24,7 @@ object IndexPlan extends async.Plan with ServerErrorResponse {
         msg => req.respond(ResponseString(msg))
       )
 
-    case req @ GET(Path("echo")) =>
+    case req @ GET(Path("/echo")) =>
 
       Observable.from(Future.failed(new Throwable("Not found"))).subscribe(
           msg => req.respond(ResponseString(msg)),
