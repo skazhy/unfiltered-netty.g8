@@ -6,6 +6,8 @@ A [giter8](https://github.com/n8han/giter8) template for a new Unfilered app wit
     g8 skazhy/unfiltered-netty-rx
 
 
+Project has Eureka support in the `eureka` branch.
+
 Template comes with a couple of handy SBT plugins included. Together with
 standard SBT commands for packaging, testing and running you can get the
 following:
