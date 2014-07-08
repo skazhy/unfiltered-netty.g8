@@ -16,9 +16,17 @@ libraryDependencies ++= Seq(
   "com.netflix.rxjava" % "rxjava-scala" % "$rx_version$",
   "ch.qos.logback" % "logback-classic" % "1.1.2",
   "net.databinder.dispatch" %% "dispatch-core" % "0.11.1" % "test",
-  "net.databinder" %% "unfiltered-specs2" % "$unfiltered_version$" % "test"
+  "net.databinder" %% "unfiltered-specs2" % "$unfiltered_version$" % "test",
+  "com.netflix.eureka" % "eureka-client" % "1.1.134"
 )
 
 assemblySettings
 
 jarName in assembly := "root.jar"
+
+mergeStrategy in assembly <<= (mergeStrategy in assembly) { _ =>
+  {
+    case PathList("META-INF", "MANIFEST.MF") => MergeStrategy.discard
+    case _ => MergeStrategy.first
+  }
+}
