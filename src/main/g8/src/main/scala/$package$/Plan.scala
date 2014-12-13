@@ -14,6 +14,6 @@ object IndexPlan extends async.Plan with ServerErrorResponse {
       req.respond(ResponseString(message))
 
     case req @ GET(Path("/echo")) =>
-      err => req.respond(NotFound)
+      req.respond(NotFound)
   }
 }
