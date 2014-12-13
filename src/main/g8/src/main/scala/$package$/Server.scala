@@ -8,5 +8,4 @@ object Server {
       .handler(IndexPlan)
       .run()
   }
-
 }
