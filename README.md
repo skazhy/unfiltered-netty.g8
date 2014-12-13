@@ -2,6 +2,8 @@
 
 A [giter8](https://github.com/n8han/giter8) template for a new Unfilered app with Netty.
 
+If you need Eureka and RxJava support, please use [eureka branch](https://github.com/skazhy/unfiltered-netty.g8/tree/eureka).
+
 
     g8 skazhy/unfiltered-netty
 
